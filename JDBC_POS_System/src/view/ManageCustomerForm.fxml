@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<AnchorPane fx:id="manageCustomer" prefHeight="565.0" prefWidth="585.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ManageCustomerController">
+   <children>
+      <ImageView fitHeight="54.0" fitWidth="65.0" layoutX="14.0" layoutY="14.0" onMouseClicked="#navigateMainWindow" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resource/blue_repicthousebase_1484336386-1.png" />
+         </image>
+      </ImageView>
+      <JFXTextField fx:id="txtCustomerId" editable="false" labelFloat="true" layoutX="96.0" layoutY="61.0" prefHeight="25.0" prefWidth="336.0" promptText="Customer ID" />
+      <JFXTextField fx:id="txtCustomerName" labelFloat="true" layoutX="96.0" layoutY="119.0" prefHeight="25.0" prefWidth="336.0" promptText="Customer name" />
+      <JFXTextField fx:id="txtAddress" labelFloat="true" layoutX="95.0" layoutY="178.0" prefHeight="36.0" prefWidth="336.0" promptText="Customer Address" />
+      <TableView fx:id="tblCustomers" layoutX="12.0" layoutY="258.0" prefHeight="299.0" prefWidth="561.0">
+        <columns>
+          <TableColumn prefWidth="117.0" text="Customer ID" />
+          <TableColumn prefWidth="281.0" text="Customer Name" />
+            <TableColumn prefWidth="162.0" text="Address" />
+        </columns>
+      </TableView>
+      <JFXButton fx:id="btnAddNewCustomer" layoutX="442.0" layoutY="41.0" onAction="#btnNewCustomer_OnAction" prefHeight="25.0" prefWidth="114.0" ripplerFill="#0e2be5" style="-fx-cursor: hand; -fx-background-color: #80aaff;" text="+ New Customer" />
+      <JFXButton fx:id="btnSave" layoutX="300.0" layoutY="222.0" onAction="#btnSave_onAction" prefHeight="25.0" prefWidth="63.0" style="-fx-cursor: hand; -fx-background-color: #80ff80;" text="Save" />
+      <JFXButton fx:id="btnDelete" layoutX="374.0" layoutY="222.0" onAction="#btnDelete_onAction" prefHeight="25.0" prefWidth="54.0" style="-fx-cursor: hand; -fx-background-color: #ff4d94;" text="Deete" />
+   </children>
+</AnchorPane>

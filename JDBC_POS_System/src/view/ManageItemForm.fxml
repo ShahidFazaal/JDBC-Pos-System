@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="manageItems" prefHeight="565.0" prefWidth="585.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ManageItemController">
+   <children>
+      <ImageView fitHeight="54.0" fitWidth="65.0" layoutX="14.0" layoutY="14.0" onMouseClicked="#navigateMainWindow" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resource/blue_repicthousebase_1484336386-1.png" />
+         </image>
+      </ImageView>
+      <JFXTextField fx:id="txtItemCode" editable="false" labelFloat="true" layoutX="134.0" layoutY="86.0" prefHeight="25.0" prefWidth="123.0" promptText="Item Code" />
+      <JFXTextField fx:id="txtItemDescription" labelFloat="true" layoutX="134.0" layoutY="155.0" prefHeight="25.0" prefWidth="123.0" promptText="Item Description" />
+      <TableView fx:id="tblItems" layoutX="12.0" layoutY="258.0" prefHeight="299.0" prefWidth="561.0">
+        <columns>
+          <TableColumn prefWidth="106.0" text="Code" />
+          <TableColumn prefWidth="189.0" text="Description" />
+            <TableColumn prefWidth="130.0" text="Qty on Hand" />
+            <TableColumn prefWidth="135.0" text="Untit Price" />
+        </columns>
+      </TableView>
+      <JFXButton fx:id="btnAddNewItem" layoutX="442.0" layoutY="41.0" onAction="#btnNewItem_OnAction" prefHeight="25.0" prefWidth="114.0" ripplerFill="#0e2be5" style="-fx-cursor: hand; -fx-background-color: #80aaff;" text="+ New Item" />
+      <JFXButton fx:id="btnSave" layoutX="198.0" layoutY="218.0" onAction="#btnSave_onAction" prefHeight="25.0" prefWidth="63.0" style="-fx-cursor: hand; -fx-background-color: #80ff80;" text="Save" />
+      <JFXButton fx:id="btnDelete" layoutX="272.0" layoutY="218.0" onAction="#btnDelete_onAction" prefHeight="25.0" prefWidth="54.0" style="-fx-cursor: hand; -fx-background-color: #ff4d94;" text="Deete" />
+      <JFXTextField fx:id="txtQTY" layoutX="293.0" layoutY="84.0" promptText="Quantity on hand" />
+      <JFXTextField fx:id="txtUnitPrice" layoutX="292.0" layoutY="154.0" promptText="Unit price" />
+   </children>
+</AnchorPane>

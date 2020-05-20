@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="login" focusTraversable="true" prefHeight="427.0" prefWidth="396.0" style="-fx-background-color: #F8F9F9;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cfdaeb" height="337.0" layoutX="27.0" layoutY="57.0" opacity="0.44" stroke="BLACK" strokeType="INSIDE" width="339.0" />
+      <ImageView fitHeight="117.0" fitWidth="99.0" layoutX="150.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resource/user-png-icon-account-avatar-human-male-man-men-people-person-download-svg-download-png-edit-icon-512.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="135.0" layoutY="114.0" text="Member Login">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtUsername" labelFloat="true" layoutX="102.0" layoutY="171.0" prefHeight="25.0" prefWidth="206.0" promptText="UserName" />
+      <JFXPasswordField fx:id="txtPassword" labelFloat="true" layoutX="102.0" layoutY="232.0" onAction="#txtPassword_onAction" prefHeight="25.0" prefWidth="206.0" promptText="Password" />
+      <JFXButton fx:id="btnSignIn" layoutX="77.0" layoutY="281.0" onAction="#btnSignIn_OnAction" prefHeight="25.0" prefWidth="243.0" ripplerFill="#f50606" style="-fx-background-color: #5DADE2; -fx-cursor: hand;" text="Sign In" />
+      <ImageView fitHeight="24.0" fitWidth="30.0" layoutX="76.0" layoutY="176.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resource/icons8-user-60.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="24.0" fitWidth="30.0" layoutX="74.0" layoutY="235.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resource/icons8-secure-48.png" />
+         </image>
+      </ImageView>
+      <JFXCheckBox layoutX="77.0" layoutY="315.0" prefHeight="18.0" prefWidth="108.0" text="Remember Me" />
+      <Label layoutX="224.0" layoutY="316.0" style="-fx-cursor: hand;" text="Forgot password?">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblSignUp" layoutX="160.0" layoutY="357.0" onMouseClicked="#signUp_OnMouseClicked" prefHeight="17.0" prefWidth="83.0" style="-fx-cursor: hand;" text="Sign Up here!" />
+      <Label fx:id="txtWarning" layoutX="120.0" layoutY="142.0" prefHeight="17.0" prefWidth="194.0" text="Please try again in 1 minuts" textFill="#fc0505" visible="false" />
+   </children>
+</AnchorPane>
